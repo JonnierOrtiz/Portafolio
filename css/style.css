@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  cursor: url('/img/cursor.png'), auto;
+  cursor: url('/img/cursor.webp'), auto;
   line-height: 1.5;
 }
 
