@@ -193,7 +193,7 @@
       <p class="text-sm text-white text-opacity-80 mb-4">Identidad visual para marcas con enfoque minimalista.</p>
 
       <!-- Carrusel -->
-      <div class="relative" x-data="{ currentImage: 0, images: ['img/branding/jpb.png', 'img/branding/jpb1.png', 'img/branding/busos.webp', 'img/branding/busos1.png', 'img/branding/busos2.png', 'img/branding/busos3.png' ] }">
+      <div class="relative" x-data="{ currentImage: 0, images: ['img/branding/jpb.webp', 'img/branding/jpb1.webp', 'img/branding/busos.webp', 'img/branding/busos1.webp', 'img/branding/busos2.webp', 'img/branding/busos3.webp' ] }">
         <div class="aspect-[4/3] w-full overflow-hidden rounded">
           <div class="flex transition-transform duration-500 ease-in-out" :style="`transform: translateX(-${currentImage * 100}%)`">
             <template x-for="image in images" :key="image">
