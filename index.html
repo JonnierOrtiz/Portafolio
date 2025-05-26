@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio | Jonnier Santiago</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-black text-white font-sans">
+  
+   <!-- Pantalla de carga -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-bar-container">
+      <div class="loading-bar" id="loading-bar"></div>
+    </div>
+    <p class="loading-text">Cargando Portafolio...</p>
+    <button id="advance-btn" class="advance-btn">Avanzar</button>
+  </div>
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-black bg-opacity-80 text-white" style="visibility: hidden;">
+    <div class="w-full px-6 py-4 flex justify-between items-center hud bg-black bg-opacity-70">
+      <a href="index.html" class="text-2xl font-extrabold text-white">▶ Portafolio Jonnier Ortiz</a>
+      <button id="menu-btn" class="lg:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <ul id="nav-links" class="hidden lg:flex space-x-6 font-semibold text-white">
+        <li class="border-r border-white pr-4"><a href="about.html" class="nav-link" id="about-link">Sobre mí</a></li>
+        <li class="border-r border-white pr-4"><a href="skills.html" class="nav-link" id="skills-link">Habilidades</a></li>
+        <li class="border-r border-white pr-4"><a href="projects.html" class="nav-link" id="projects-link">Proyectos</a></li>
+        <li class="border-r border-white pr-4"><a href="contact.html" class="nav-link" id="projects-link">Contacto</a></li>
+      </ul>
+      
+    </div>
+    
+    <!-- Menú móvil corregido -->
+    <div id="mobile-menu" class="lg:hidden hidden px-6 pb-4 space-y-2 bg-black bg-opacity-90 flex flex-col justify-center items-center">
+    <a href="about.html" class="block nav-link text-white" id="about-link">Sobre mí</a>
+    <a href="skills.html" class="block nav-link text-white" id="skills-link">Habilidades</a>
+    <a href="projects.html" class="block nav-link text-white" id="projects-link">Proyectos</a>
+    <a href="contact.html" class="block nav-link text-white" id="contact-link">Contacto</a>
+    </div>
+  
+      
+  </nav>
+  
+  <!-- Hero -->
+  <section class="hero-bg px-6 bg-cover bg-center relative" style="background-image: url('img/fondo.png');">
+    <div class="absolute inset-0 bg-black bg-opacity-80 z-10 flex justify-center items-center text-center">
+      <div class="max-w-2xl mx-auto p-8 hud rounded-lg bg-black bg-opacity-50 content box-shadow relative z-20">
+        <h1 id="hero-title" class="text-4xl md:text-5xl font-extrabold mb-6 text-white text-shadow opacity-0">👾 ¡Bienvenido, jugador!</h1>
+        <p id="hero-text" class="text-xl md:text-2xl mb-6 text-white text-shadow opacity-0">
+          Soy <span class="font-bold">Jonnier Santiago</span>, desarrollador web y diseñador gráfico. Tu misión: explorar mis proyectos, habilidades y contactarme.
+        </p>
+        <a id="hero-btn" href="projects.html" class="bg-white text-black font-bold px-6 py-3 rounded hover:bg-gray-300 transition opacity-0">▶ Ver Proyectos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="hud-footer bg-black bg-opacity-80 text-white py-6 shadow-xl shadow-white/30 transition-all duration-300">
+    <div class="container mx-auto text-center">
+      <p class="text-sm">© 2025 Jonnier Santiago | Todos los derechos reservados.</p>
+      <p class="text-sm mt-2">Desarrollado con ❤️ y Tailwind CSS</p>
+    </div>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
+  
+</body>
+</html>

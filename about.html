@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre mí | Jonnier Santiago</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- tsParticles CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  </head>
+
+  <body class="bg-black text-white font-sans relative">
+
+    <!-- Partículas -->
+<div id="tsparticles" class="absolute inset-0 z-0 pointer-events-none"></div>
+
+    <!-- Fondo con opacidad aplicada -->
+<div
+class="absolute inset-0 z-0 bg-cover bg-center pointer-events-none"
+style="background-image: url('img/fondo.png'); opacity: 0.6;"
+></div>
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-black bg-opacity-80 text-white"
+    >
+      <div class="w-full px-6 py-4 flex justify-between items-center hud bg-black bg-opacity-70">
+        <a href="index.html" class="text-2xl font-extrabold text-white"
+          >▶ Portafolio Jonnier Ortiz</a
+        >
+        <button id="menu-btn" class="lg:hidden focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <ul id="nav-links" class="hidden lg:flex space-x-6 font-semibold text-white">
+            <li class="border-r border-white pr-4"><a href="about.html" class="nav-link" id="about-link">Sobre mí</a></li>
+            <li class="border-r border-white pr-4"><a href="skills.html" class="nav-link" id="skills-link">Habilidades</a></li>
+            <li class="border-r border-white pr-4"><a href="projects.html" class="nav-link" id="projects-link">Proyectos</a></li>
+            <li><a href="contact.html" class="nav-link" id="contact-link">Contacto</a></li>
+          </ul>
+      </div>
+
+     <!-- Menú móvil corregido -->
+<div id="mobile-menu" class="lg:hidden hidden px-6 pb-4 space-y-2 bg-black bg-opacity-90 flex flex-col justify-center items-center">
+  <a href="about.html" class="block nav-link text-white" id="about-link">Sobre mí</a>
+  <a href="skills.html" class="block nav-link text-white" id="skills-link">Habilidades</a>
+  <a href="projects.html" class="block nav-link text-white" id="projects-link">Proyectos</a>
+  <a href="contact.html" class="block nav-link text-white" id="contact-link">Contacto</a>
+</div>
+      
+
+
+
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="pt-28 px-6 flex-grow relative z-20">
+      <section class="max-w-5xl mx-auto text-white p-6">
+        <!-- Título con estilo responsivo -->
+<h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-10 text-center text-white tracking-widest drop-shadow-md">
+  <span class="text-[#BCBEB3]">SOBRE</span> MÍ
+</h1>
+
+        <!-- Tarjetas de información -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Tarjeta 1 -->
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      class="relative bg-white text-black p-6 rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-in-out transform scale-100"
+    >
+      <!-- Fondo con imagen y opacidad -->
+      <div
+        class="absolute inset-0 bg-cover bg-center opacity-60"  
+        style="background-image: url('img/yo3.png'); background-size: cover; background-position: center;"
+      ></div>
+  
+      <!-- Contenido encima del fondo -->
+      <div class="relative z-10">
+        <div class="flex items-center mb-4">
+          <img
+            src="img/yonegro.png"
+            alt="Foto de Jonnier Santiago"
+            class="w-20 h-20 rounded-full object-cover mr-4 transition-transform duration-500 ease-in-out hover:scale-125 cursor-pointer"
+          />
+          <h2 class="text-2xl font-semibold">¿Quién soy?</h2>
+        </div>
+        <p class="text-lg">
+          ¡Hola! Soy <strong>Jonnier Santiago</strong>, un apasionado
+          desarrollador web y diseñador gráfico con experiencia en
+          tecnologías como HTML, CSS, JavaScript, y herramientas de diseño
+          como Photoshop, Illustrator, y After Effects.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Tarjeta 2 -->
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1200"
+      class="relative bg-white text-black p-6 rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-in-out transform scale-100"
+    >
+      <!-- Fondo con imagen y opacidad -->
+      <div
+        class="absolute inset-0 bg-cover bg-center opacity-35" 
+        style="background-image: url('img/img.jpeg'); background-size: cover; background-position: center;"
+      ></div>
+  
+      <!-- Contenido encima del fondo -->
+      <div class="relative z-10">
+        <h2 class="text-2xl font-semibold mb-4">Mi enfoque</h2>
+        <p class="text-lg">
+          Me encanta combinar diseño y funcionalidad para crear
+          experiencias únicas. Mi objetivo es seguir perfeccionando mis
+          habilidades y trabajar en proyectos innovadores que ofrezcan
+          soluciones tecnológicas efectivas.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Tarjeta 3 -->
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1400"
+      class="relative bg-white text-black p-6 rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-in-out transform scale-100"
+    >
+      <!-- Fondo con imagen y opacidad -->
+      <div
+        class="absolute inset-0 bg-cover bg-center opacity-35" 
+        style="background-image: url('img/prog.png'); background-size: cover; background-position: center;"
+      ></div>
+  
+      <!-- Contenido encima del fondo -->
+      <div class="relative z-10">
+        <h2 class="text-2xl font-semibold mb-4">Habilidades y herramientas</h2>
+        <p class="text-lg">
+          Cuento con experiencia en tecnologías como
+          <strong>HTML, CSS, JavaScript</strong>, y diseño gráfico con
+          herramientas como <strong>Photoshop, Illustrator, After Effects</strong>.
+          Me especializo en crear sitios web responsivos y soluciones visuales que conecten con los usuarios.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Tarjeta adicional -->
+  <div
+    data-aos="fade-up"
+    data-aos-duration="1600"
+    class="relative bg-white text-black p-6 rounded-lg shadow-lg mt-8 overflow-hidden transition-all duration-300 ease-in-out transform scale-100"
+  >
+    <!-- Fondo con imagen y opacidad -->
+    <div
+      class="absolute inset-0 bg-cover bg-center opacity-35" 
+      style="background-image: url('img/cap.png'); background-size: cover; background-position: center;"
+    ></div>
+  
+    <!-- Contenido encima del fondo -->
+    <div class="relative z-10">
+      <h2 class="text-2xl font-semibold mb-4">Más sobre mí</h2>
+      <p class="text-lg mb-4">
+        En mi tiempo libre, me encanta practicar <strong>boxing</strong> y
+        explorar nuevas tendencias en diseño y tecnología. Siempre estoy
+        buscando nuevos retos y proyectos desafiantes que me permitan seguir
+        aprendiendo y creciendo.
+      </p>
+      <p class="text-lg">
+        Este portafolio es un reflejo de mi pasión por la tecnología y el
+        diseño. Si tienes alguna consulta o proyecto en mente, no dudes en
+        <a href="contact.html" class="text-blue-500 underline">contactarme</a>.
+      </p>
+    </div>
+  </div>
+  
+  
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="hud-footer bg-black bg-opacity-80 text-white py-6 shadow-lg shadow-white/20 transition-all duration-300 mt-16">
+      <div class="container mx-auto text-center">
+        <p class="text-sm">© 2025 Jonnier Santiago | Todos los derechos reservados.</p>
+        <p class="text-sm mt-2">Desarrollado con ❤️ y Tailwind CSS</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      // AOS
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+      });
+
+      // Partículas
+      tsParticles.load("tsparticles", {
+        fullScreen: {
+          enable: false
+        },
+        background: {
+          color: {
+            value: "transparent"
+          }
+        },
+        particles: {
+          number: {
+            value: 60
+          },
+          color: {
+            value: "#ffffff"
+          },
+          shape: {
+            type: "circle"
+          },
+          opacity: {
+            value: 0.3
+          },
+          size: {
+            value: 3
+          },
+          move: {
+            enable: true,
+            speed: 1
+          },
+        },
+      });
+
+    </script>
+    
+  </body>
+</html>

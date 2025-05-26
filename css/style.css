@@ -1,0 +1,233 @@
+/* Elimina el padding-top global en el body */
+body {
+  margin: 0;
+  padding: 0;
+  cursor: url('/img/cursor.png'), auto;
+  line-height: 1.5;
+}
+
+/* Elimina la visibilidad oculta en el navbar */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  visibility: visible; /* Ahora siempre será visible */
+}
+
+/* Ajustar el espacio para que el contenido no quede cubierto por el navbar fijo */
+.hero-bg {
+  padding-top: 80px; /* Esto asegurará que el contenido no se superponga al navbar */
+  padding-bottom: 80px;
+  position: relative;
+  background: linear-gradient(to right, #0a0a0a, #1a1a1a);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+
+/* Sombra en el texto */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Sombra en el contenedor */
+.box-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Pantalla de carga */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a0a0a;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+.loading-bar-container {
+  width: 80%;
+  max-width: 500px;
+  height: 6px;
+  background-color: #333;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.loading-bar {
+  width: 0%;
+  height: 100%;
+  background-color: white;
+  border-radius: 3px;
+  transition: width 0s;
+}
+
+.loading-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Botón de avanzar */
+.advance-btn {
+  padding: 12px 25px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  display: none;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.advance-btn:hover {
+  background-color: #ccc;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.advance-btn:focus {
+  outline: 2px solid #AFC715;
+  outline-offset: 2px;
+}
+
+/* Enlaces de la navbar */
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Sombra animada */
+.hud {
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff;
+  animation: shadowPulse 4s ease-in-out infinite;
+}
+
+/* Animación de la sombra */
+@keyframes shadowPulse {
+  0% {
+    -webkit-box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 20px #AFC715, 0 0 40px #AFC715;
+    box-shadow: 0 0 20px #AFC715, 0 0 40px #AFC715;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+  }
+}
+
+/* Sombra animada para el footer */
+.hud-footer {
+  box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+  animation: footerShadowPulse 4s ease-in-out infinite;
+  z-index: 1000;
+  position: relative;
+}
+
+@keyframes footerShadowPulse {
+  0% {
+    -webkit-box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 20px #AFC715, 0 0 40px #AFC715;
+    box-shadow: 0 0 20px #AFC715, 0 0 40px #AFC715;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+  }
+}
+
+/* Animaciones de entrada */
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fade-in-down 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+/* Retardo en las animaciones */
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-700 {
+  animation-delay: 0.7s;
+}
+
+
+
+/* Estilo para subrayar el enlace activo */
+.nav-link.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Agregar este padding-top a las secciones de destino */
+#proyectos-programacion, #proyectos-diseno {
+  padding-top: 80px; /* Ajusta este valor según la altura de tu navbar */
+  scroll-margin-top: 80px; /* Esto también ayuda al desplazamiento */
+}
+
+
+
