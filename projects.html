@@ -242,7 +242,7 @@
       <p class="text-sm text-white text-opacity-80 mb-4">Proyectos de diseño gráficos con enfoque a productos exhibidos de una manera creativa y original.</p>
 
       <!-- Carrusel -->
-      <div class="relative" x-data="{ currentImage: 0, images: ['img/catalogo/jpcatalogo.png', 'img/catalogo/sfcatalogo.png'] }">
+      <div class="relative" x-data="{ currentImage: 0, images: ['img/catalogo/jpcatalogo.webp', 'img/catalogo/sfcatalogo.webp'] }">
         <div class="aspect-[4/3] w-full overflow-hidden rounded">
           <div class="flex transition-transform duration-500 ease-in-out" :style="`transform: translateX(-${currentImage * 100}%)`">
             <template x-for="image in images" :key="image">
