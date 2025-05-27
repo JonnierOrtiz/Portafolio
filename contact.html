@@ -65,20 +65,24 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="bg-white text-black p-6 rounded-lg shadow-lg" data-aos="fade-up">
             <h3 class="text-xl font-bold text-center mb-4">Formulario de Contacto</h3>
-            <form action="#" method="POST">
-              <label for="name" class="block mb-2">Nombre:</label>
-              <input type="text" id="name" name="name" class="w-full p-3 mb-4 bg-gray-200 text-black rounded-lg" required />
-              
-              <label for="email" class="block mb-2">Correo Electrónico:</label>
-              <input type="email" id="email" name="email" class="w-full p-3 mb-4 bg-gray-200 text-black rounded-lg" required />
+            <form action="https://formspree.io/f/mgvkgope" method="POST">
+            <label for="name" class="block mb-2">Nombre:</label>
+            <input type="text" id="name" name="name" class="w-full p-3 mb-4 bg-gray-200 text-black rounded-lg" required />
+  
+            <label for="email" class="block mb-2">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" class="w-full p-3 mb-4 bg-gray-200 text-black rounded-lg" required />
 
-              <label for="message" class="block mb-2">Mensaje:</label>
-              <textarea id="message" name="message" rows="4" class="w-full p-3 mb-4 bg-gray-200 text-black rounded-lg" required></textarea>
-              
-              <button type="submit" class="w-full bg-[#AFC715] text-white p-3 rounded-lg font-bold">
-                ¡Hablemos ahora!
-              </button>
+            <label for="message" class="block mb-2">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" class="w-full p-3 mb-4 bg-gray-200 text-black rounded-lg" required></textarea>
+
+            <!-- Campo opcional para desactivar CAPTCHA -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <button type="submit" class="w-full bg-[#AFC715] text-white p-3 rounded-lg font-bold">
+            ¡Hablemos ahora!
+            </button>
             </form>
+
           </div>
 
           <!-- Información de contacto -->
