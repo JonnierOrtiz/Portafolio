@@ -120,48 +120,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //
-
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('form');
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const modal = document.getElementById('modal');
-    const modalContent = modal.querySelector('div');
-    const closeModalBtn = document.getElementById('closeModalBtn');
+  const form = document.querySelector('form');
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const modal = document.getElementById('modal');
+  const modalContent = modal.querySelector('div');
+  const closeModalBtn = document.getElementById('closeModalBtn');
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const message = form.message.value.trim();
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
 
-      if (!name || !email || !message) {
-        alert('Por favor, completa todos los campos.');
-        return;
-      }
-
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Enviando...';
-
-      setTimeout(() => {
-        modal.classList.remove('hidden');
-        // Añadir clase de animación
-        modalContent.classList.add('modal-animate');
-
-        form.reset();
-        submitBtn.disabled = false;
-        submitBtn.textContent = '¡Hablemos ahora!';
-      }, 1500);
-    });
-
-    function closeModal() {
-      modal.classList.add('hidden');
-      // Remover clase para que la animación pueda reproducirse de nuevo
-      modalContent.classList.remove('modal-animate');
+    if (!name || !email || !message) {
+      alert('Por favor, completa todos los campos.');
+      return;
     }
 
-    closeModalBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
-    });
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...';
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch('https://formspree.io/f/mgvkgope', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        modal.classList.remove('hidden');
+        modalContent.classList.add('modal-animate');
+        form.reset();
+      } else {
+        alert('Hubo un problema al enviar el formulario. Intenta de nuevo.');
+      }
+    } catch (error) {
+      alert('Error de red. Verifica tu conexión.');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = '¡Hablemos ahora!';
+    }
   });
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    modalContent.classList.remove('modal-animate');
+  }
+
+  closeModalBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+});
